@@ -18,6 +18,7 @@ function showTime () {
         var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
         document.getElementById("timer").style.display = 'block';
+        document.getElementById("exp").style.display = 'none';
 
         document.getElementById("showDay").innerHTML = '<b>' + days + '</b><br>' + " D" ; 
         document.getElementById("showDay").style.backgroundColor = '#009688';
@@ -46,6 +47,7 @@ function showTime () {
     else {
         clearInterval(timing); 
         document.getElementById("timer").style.display = 'none';
+        document.getElementById("exp").style.display = 'block';
         document.getElementById("exp").innerHTML = '<b>' + "The Time is Over!"; + '</b>';
         document.getElementById("exp").style.color = 'black';
     }
